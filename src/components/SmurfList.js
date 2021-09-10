@@ -4,14 +4,12 @@ import { connect } from 'react-redux'
 
  const SmurfList = (props)=> {
    
-  
-    console.log('test 123', props.smurfs)
     if (props.isLoading) {
         return <h1>Loading...</h1>;
     }
 
     return(<div className="listContainer">
-        {props.smurfs.map(smurf => (<Smurf smurf={smurf} />))}
+        {props.smurfs.map(smurf => (<Smurf key={smurf.id} smurf={smurf} />))}
     </div>);
 }
 
