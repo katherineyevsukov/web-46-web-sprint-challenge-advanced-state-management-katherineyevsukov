@@ -46,7 +46,6 @@ export const reducer = (state = initialState, action)=>{
         case(ERROR_MESSAGE):
             return({
                 ...state,
-                smurfs: [],
                 isLoading: false,
                 error: action.payload,
             })    
