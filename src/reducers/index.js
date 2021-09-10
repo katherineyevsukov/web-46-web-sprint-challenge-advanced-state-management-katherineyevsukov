@@ -18,14 +18,14 @@ export const reducer = (state = initialState, action)=>{
         case(FETCH_SUCCESS):
             return({
                 ...state,
-                smurfs: [action.payload.map(smurf => 
+                smurfs: action.payload.map(smurf => 
                     ({
                         id: smurf.id, 
                         name: smurf.name, 
                         position: smurf.position, 
                         nickname: smurf.nickname, 
                         description: smurf.description,
-                    }))],
+                    })),
                 isLoading: false,
                 error:'',
             })
